@@ -1,17 +1,7 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    $('.product').mouseenter(function(){
-        var img = $(this).find('img');
-        var src = img.attr('src');
-        var alt = img.attr('alt');
-        img.attr('src', alt);
-        img.attr('alt', src);
-    });
+products = document.querySelectorAll(".product-preview");
 
-    $('.product').mouseleave(function(){
-        var img = $(this).find('img');
-        var src = img.attr('src');
-        var alt = img.attr('alt');
-        img.attr('src', alt);
-        img.attr('alt', src);
-    });
+products.forEach((product) => {
+  HQsrc = product.getAttribute("high-quality");
+  LQsrc = product.getAttribute("low-quality");
+  product.style.backgroundImage = "url(" + LQsrc + ")";
 });

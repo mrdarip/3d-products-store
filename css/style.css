@@ -46,13 +46,21 @@ nav ul li a{
     text-align: center;
 }
 
-.product:hover img{
-    background-color: var(--primary);
-    color: var(--background);
-}
-
-.product img{
-    object-fit: cover;
+.product .product-preview{
     image-rendering: pixelated;
+    width: 400px; 
+    height: 400px;
+    margin:0 auto;
+    background-size: 6000%; /* 60 frames * 100% */
+    animation: like-gif steps(59) 5s infinite both; /* 59 (60 - 1) frames in 5s */
+    background-image: url();
 }
 
+@keyframes like-gif {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
