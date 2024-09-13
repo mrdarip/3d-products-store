@@ -34,8 +34,24 @@ nav ul li a{
     gap: 1rem;
 }
 
-#products img{
-    min-width: 200px;
+.product{
+    width: 300px;
+    
+    padding: 1rem;
+   
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.product:hover img{
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.product img{
     object-fit: cover;
     image-rendering: pixelated;
 }
