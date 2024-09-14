@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap");
 :root {
   --text: #eae9e9;
   --background: #170e0e;
@@ -18,7 +18,12 @@ body {
   font-family: "Domine", serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Alumni Sans Pinstripe", sans-serif;
 }
 
@@ -39,18 +44,23 @@ nav ul li a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .product {
-  width: 15rem;
-  display: flex;
-  flex-direction: column;
+  width: 12em;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 3fr 1fr;
+  gap: 0 1rem;
 
-  text-align: center;
+  grid-template-areas:
+    "image image"
+    "title price";
 }
 
 .product-preview {
+  grid-area: image;
   image-rendering: pixelated;
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -58,6 +68,19 @@ nav ul li a {
   background-size: 6000%; /* 60 frames * 100% */
   animation: like-gif steps(59) 5s infinite both; /* 59 (60 - 1) frames in 5s */
   background-image: url();
+}
+
+.product h2 {
+  grid-area: title;
+  font-family: Domine, serif;
+  font-size: 1em;
+  margin: 0;
+}
+
+.product p {
+  grid-area: price;
+  margin: 0;
+  text-align: right;
 }
 
 @keyframes like-gif {
