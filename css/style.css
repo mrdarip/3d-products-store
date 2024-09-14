@@ -9,8 +9,8 @@
 body {
   background-color: var(--background);
   color: var(--text);
-  margin: 0;
-  padding: 0;
+  width: 80%;
+  margin: auto;
 }
 
 nav ul{
@@ -35,21 +35,17 @@ nav ul li a{
 }
 
 .product{
-    width: 300px;
-    
-    padding: 1rem;
-   
-    margin: 1rem;
+    width: 15rem;
     display: flex;
     flex-direction: column;
 
     text-align: center;
 }
 
-.product .product-preview{
+.product-preview{
     image-rendering: pixelated;
-    width: 400px; 
-    height: 400px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     margin:0 auto;
     background-size: 6000%; /* 60 frames * 100% */
     animation: like-gif steps(59) 5s infinite both; /* 59 (60 - 1) frames in 5s */
