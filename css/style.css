@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
 :root {
   --text: #eae9e9;
   --background: #170e0e;
@@ -11,45 +14,50 @@ body {
   color: var(--text);
   width: 80%;
   margin: auto;
+
+  font-family: "Domine", serif;
 }
 
-nav ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: var(--text);
-    font-size: 1.5rem;
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
 }
 
-#products{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1rem;
+nav ul li a {
+  text-decoration: none;
+  color: var(--text);
 }
 
-.product{
-    width: 15rem;
-    display: flex;
-    flex-direction: column;
-
-    text-align: center;
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
 }
 
-.product-preview{
-    image-rendering: pixelated;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    margin:0 auto;
-    background-size: 6000%; /* 60 frames * 100% */
-    animation: like-gif steps(59) 5s infinite both; /* 59 (60 - 1) frames in 5s */
-    background-image: url();
+.product {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.product-preview {
+  image-rendering: pixelated;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  background-size: 6000%; /* 60 frames * 100% */
+  animation: like-gif steps(59) 5s infinite both; /* 59 (60 - 1) frames in 5s */
+  background-image: url();
 }
 
 @keyframes like-gif {
